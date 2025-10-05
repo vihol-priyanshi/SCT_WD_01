@@ -1,41 +1,42 @@
 import React, { useState } from "react";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { HashRouter, Routes, Route, Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Footer from "../src/components/Footer";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Features from "./components/Features";
 import Download from "./components/Download";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
-
-// Layout with Navbar + Outlet for child routes
+// Layout as a Route wrapper with Outlet
 const Layout = () => (
   <>
     <Navbar />
-     <Outlet/>
-    <Footer/>
+    <Outlet />
+    <Footer />
   </>
 );
 
 function App() {
-  const [playerName, setPlayerName] = useState(""); // shared state
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Layout/>,
-      children: [
-        { index: true, element: <Home  playerName={playerName} setPlayerName={setPlayerName} /> }, // default route
-        { path: "features", element: <Features /> },
-        { path: "download", element: <Download /> },
-        { path: "about", element: <About /> },
-        { path: "contact", element: <Contact playerName={playerName} /> },
-      ],
-    },
-  ]);
+  const [playerName, setPlayerName] = useState("");
 
-  return <RouterProvider router={router} />;
+  return (
+    <HashRouter>
+      <Routes>
+        {/* Layout route */}
+        <Route path="/" element={<Layout />}>
+          <Route
+            index
+            element={<Home playerName={playerName} setPlayerName={setPlayerName} />}
+          />
+          <Route path="features" element={<Features />} />
+          <Route path="download" element={<Download />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact playerName={playerName} />} />
+        </Route>
+      </Routes>
+    </HashRouter>
+  );
 }
 
 export default App;
-

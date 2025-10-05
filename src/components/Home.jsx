@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import villager from "../Images/OtherImg/thinking_villager.png";
 import screenImg from "../Images/OtherImg/heroImgsection.webp";
 import villager2 from "../Images/OtherImg/villager2.png";
-import "./Hero.css";
+import "./Home.css";
 import { NavLink } from "react-router-dom";
 const Hero = ({ playerName, setPlayerName }) => {
 
@@ -54,7 +54,7 @@ const Hero = ({ playerName, setPlayerName }) => {
                   <h3> Dominate the Clash!</h3>
                 </div>
                 <div className="btn">
-                  <button className="btn-features"><NavLink to="/features">Explore Features</NavLink></button>
+                  <button className="btn-features"><NavLink to="features">Explore Features</NavLink></button>
                 </div>
               </div>
             </div>

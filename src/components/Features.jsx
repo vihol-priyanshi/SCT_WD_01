@@ -19,7 +19,7 @@ const Features = () => {
             {features.map((feat, index) => (
               <div className="feature-card" key={index}>
                 <img
-                  src={`/featuresPic/${feat.image}`}
+                  src={`${import.meta.env.BASE_URL}featuresPic/${feat.image}`}
                   alt={feat.name}
                   className="feature-img"
                 />
@@ -34,4 +34,6 @@ const Features = () => {
 };
 
 export default Features;
+
+
 
