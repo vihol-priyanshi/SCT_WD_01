@@ -1,0 +1,193 @@
+.download-container {
+  position: relative;
+  margin: 0;
+  height: 385px;
+  max-height: 940px;
+  background-color: #000;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Common image rules */
+.download-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.download-hero-text p {
+  font-size: 1.6rem;
+}
+.download-hero-mobile {
+  display:block;
+}
+
+.download-hero-desktop {
+  display: none;
+}
+.download{
+  padding: 1rem;
+  font-size:2rem;
+  margin: 1rem;
+  font-weight: 500;
+  background-color:rgb(255,69,0);
+  color: #fff;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  box-shadow: 3px 3px 3px #aaa;
+  font-family: 'Clash_Regular';
+}
+.section2 {
+  background: #f9f9f9;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.section2 h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.section2 p {
+  font-size:1.5rem;
+  border-radius: 15px;
+  border: 1rem solid;
+  border-top-color: rgb(247, 66, 0);
+  border-bottom-color: rgb(247, 66, 0);
+  border-left-color: #fff;
+  border-right-color:#aaa;
+  padding: 0.7rem;
+  color: #3d3d3d;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+  background-color: rgb(255, 217, 0);
+}
+.pc-image {
+  display: flex;
+  flex-direction:column;
+  gap: 1.7rem;
+  margin: 2rem 0;
+  justify-content:center;
+  align-items: center;
+  text-align: center;
+}
+.pc-image img {
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+.pc-steps p{
+    margin: 0.6rem;
+}
+
+@media (min-width: 790px) {
+  .download-container {
+    height:30vh;
+    margin-top: 0;
+  }
+  .download-hero-desktop {
+    display: block;
+  }
+  .download-hero-mobile {
+    display: none;
+  }
+  .download-hero-text p {
+  font-size: 2rem;
+}
+.download{
+    padding: 1.5rem;
+    font-size:2.3rem;
+}
+.pc-image{
+    flex-direction:column;
+}
+.pc-steps p{
+    font-size: 1.8rem;
+}
+}
+
+@media (min-width: 1050px) {
+  .download-container {
+    height: 520px;
+  }
+    .download-hero-text p {
+  font-size: 2.5rem;
+}
+.download{
+    padding: 1.5rem;
+    font-size: 2.4rem;
+}
+.pc-steps p{
+    font-size: 1.8rem;
+}
+}
+
+@media (min-width: 1281px) {
+  .download-container {
+    height: 580px;
+  }
+      .download-hero-text p {
+  font-size: 3rem;
+}
+.download{
+    padding: 1.6rem;
+     font-size: 2.3rem;
+}
+.pc-image{
+    flex-direction:row;
+}
+.pc-steps p{
+    font-size: 1.7rem;
+}
+}
+
+@media (min-width: 1681px) {
+  .download-container {
+    height: 37vw;
+  }
+.download-hero-text p {
+  font-size: 3.5rem;
+}
+.download{
+    padding: 2.3rem;
+    font-size: 2.5rem;
+}
+.section-text h2{
+    font-size:3.5rem;
+}
+.pc-image{
+    flex-direction:row;
+
+}
+.pc-steps p{
+    font-size: 1.8rem;
+}
+}
+
+.download-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#222;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

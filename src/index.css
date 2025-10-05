@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "ClashRegular";
+  src: url("./assets/fonts/Clash-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "ClashBold";
+  src: url("./assets/fonts/Clash-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary:#6948ff;
+    --secondary:#553bcb;
+    --darkgrey:#22262a;
+    --lightgrey:#d3d3d3;
+    --grey:#808080;
+    --white:#f8f8f8;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+body{
+    color:#333;
+    line-height: 1.5;
+    font-family:"ClashRegular" , sans-serif;
+
+}
+.primary-color{
+    color:var(--primary);
+}
